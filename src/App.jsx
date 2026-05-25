@@ -3,8 +3,9 @@ import "./App.css";
 
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-
 import Sales from "./pages/Sales";
+import HR from "./pages/HR";
+import Supply from "./pages/Supply";
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -14,11 +15,19 @@ export default function App() {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (username === "admin" && password === "1234") {
+    if (username.trim() === "admin" && password.trim() === "1234") {
       setLoggedIn(true);
+      setPage("home");
     } else {
       alert("Invalid Credentials");
     }
+  };
+
+  const handleLogout = () => {
+    setLoggedIn(false);
+    setPage("home");
+    setUsername("");
+    setPassword("");
   };
 
   if (!loggedIn) {
@@ -34,12 +43,30 @@ export default function App() {
   }
 
   if (page === "home") {
-  return <Home setPage={setPage} />;
-}
+    return <Home setPage={setPage} />;
+  }
 
-if (page === "sales") {
-  return <Sales setPage={setPage} />;
-}
+  if (page === "sales") {
+    return <Sales setPage={setPage} handleLogout={handleLogout} />;
+  }
 
-return null;
+  if (page === "hr") {
+  return (
+    <HR
+      setPage={setPage}
+      handleLogout={handleLogout}
+    />
+  );
+  }
+
+  if (page === "supply") {
+  return (
+    <Supply
+      setPage={setPage}
+      handleLogout={handleLogout}
+    />
+  );
+  }
+
+  return null;
 }

@@ -1,48 +1,102 @@
 import "../App.css";
 
 export default function Home({ setPage }) {
+  const departments = [
+    {
+      name: "Finance",
+      subtitle: "Budgets & P&L",
+      icon: "💰",
+      className: "dept-finance",
+      action: null,
+    },
+    {
+      name: "Sales",
+      subtitle: "Revenue & pipeline",
+      icon: "📈",
+      className: "dept-sales",
+      action: () => setPage("sales"),
+    },
+    {
+      name: "Supply Chain",
+      subtitle: "Logistics & inventory",
+      icon: "🚚",
+      className: "dept-supply",
+      action: () => setPage("supply"),
+    },
+    {
+      name: "HR",
+      subtitle: "People & workforce",
+      icon: "👥",
+      className: "dept-hr",
+      action: () => setPage("hr"),
+    },
+    {
+      name: "After Sales",
+      subtitle: "Support & service",
+      icon: "🛠",
+      className: "dept-after",
+      action: null,
+    },
+  ];
+
   return (
     <div className="home-page">
-      <div className="mindmap-container">
 
-        <div className="center-circle">
+      {/* TOP BAR */}
+
+      <div className="home-topbar">
+
+        <div className="home-logo-box">
           <img
             src="/assets/reliance-logo.png"
             alt="Reliance Logo"
-            className="center-logo-img"
+            className="home-company-logo"
           />
         </div>
 
-        <button className="branch branch-finance">
-          💰 Finance
-        </button>
+        <div className="home-welcome">
+          Welcome, Admin
+        </div>
 
-        <button className="branch branch-supply">
-          🚚 Supply Chain
-        </button>
+      </div>
 
-        <button
-          className="branch branch-sales"
-          onClick={() => setPage("sales")}
-        >
-          📈 Sales
-        </button>
+      {/* MAIN HUB */}
 
-        <button className="branch branch-hr">
-          👥 HR
-        </button>
+      <div className="hub-container">
 
-        <button className="branch branch-after-sales">
-          🛠 After Sales
-        </button>
+        <div className="hub-center">
+          <img
+            src="/assets/reliance-logo.png"
+            alt="Reliance Logo"
+            className="hub-center-logo"
+          />
+        </div>
 
-        <div className="line line-finance"></div>
-        <div className="line line-supply"></div>
-        <div className="line line-sales"></div>
-        <div className="line line-hr"></div>
-        <div className="line line-after-sales"></div>
+        {departments.map((dept, index) => (
+          <button
+            key={index}
+            className={`hub-card ${dept.className}`}
+            onClick={
+              dept.action ||
+              (() => alert(`${dept.name} module will be available soon.`))
+            }
+          >
+            <span className="hub-icon">{dept.icon}</span>
+
+            <h3>{dept.name}</h3>
+
+            <p>{dept.subtitle}</p>
+
+          </button>
+        ))}
+
+        <div className="hub-line line-to-finance"></div>
+        <div className="hub-line line-to-sales"></div>
+        <div className="hub-line line-to-supply"></div>
+        <div className="hub-line line-to-hr"></div>
+        <div className="hub-line line-to-after"></div>
 
       </div>
     </div>
   );
-}   
+}
