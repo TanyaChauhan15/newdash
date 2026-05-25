@@ -184,7 +184,7 @@ export default function Sales({ setPage, handleLogout }) {
       <div className="sales-tools">
         <input
           type="text"
-          placeholder="Search dashboards..."
+          placeholder="Search dashboards"
           className="search-bar"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}

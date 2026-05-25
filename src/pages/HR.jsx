@@ -64,7 +64,7 @@ export default function HR({ setPage, handleLogout }) {
       <div className="sales-tools">
         <input
           type="text"
-          placeholder="Search HR dashboards..."
+          placeholder="Search HR dashboards"
           className="search-bar"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}

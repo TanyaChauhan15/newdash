@@ -63,7 +63,7 @@ export default function Supply({ setPage, handleLogout }) {
 
         <input
           type="text"
-          placeholder="Search Supply dashboards..."
+          placeholder="Search Supply dashboards"
           className="search-bar"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
