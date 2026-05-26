@@ -6,15 +6,15 @@ export default function Sales({ setPage, handleLogout }) {
 
   const categories = [
     {
-      title: "DSR Dashboards",
+      title: "DSR",
       subtitle: "Daily sales reporting dashboards",
       dashboards: [
         {
-          name: "DSR Dashboard Overall",
+          name: "DSR Dashboard",
           link: "https://rrainsights.ril.com/views/RCPLDSR-Dashboards-Databricks/DSR?:showAppBanner=false&:display_count=n&:showVizHome=n",
         },
         {
-          name: "DSR Mobile View",
+          name: "DSR Mobile",
           link: "https://rrainsights.ril.com/views/RCPLDSR-MobileViews-4H-Sample/LandingPage?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link",
         },
         {
@@ -102,7 +102,7 @@ export default function Sales({ setPage, handleLogout }) {
           link: "https://datastudio.google.com/reporting/bcfbff78-d476-4eb0-a9ff-a0299cef5884/page/MlxfF",
         },
         {
-          name: "RCPL - Signature Outlet Details",
+          name: "RCPL - Signature Outlet ",
           link: "https://datastudio.google.com/u/0/reporting/b797610e-e7f1-472f-8452-d2004ed59e6d/page/p_3rw3cparnd",
         },
       ],
@@ -127,10 +127,7 @@ export default function Sales({ setPage, handleLogout }) {
           name: "Beats",
           link: "https://datastudio.google.com/u/0/reporting/ffed7ece-2189-4b92-99ce-4365bf1bb86c/page/p_ukc0s25btd",
         },
-        {
-          name: "Hierarchy Mapping ",
-          link: "https://datastudio.google.com/u/0/reporting/ffed7ece-2189-4b92-99ce-4365bf1bb86c/page/p_6rthaf6btd",
-        },
+        
         {
           name: "Distributor Churn Dashboard",
           link: "https://adb-429867542854005.5.azuredatabricks.net/dashboardsv3/01f15443933d1dec902c3665993d03bf/published?o=429867542854005",

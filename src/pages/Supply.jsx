@@ -2,7 +2,6 @@ import { useState } from "react";
 import "../App.css";
 
 export default function Supply({ setPage, handleLogout }) {
-
   const [searchTerm, setSearchTerm] = useState("");
 
   const dashboards = [
@@ -19,9 +18,7 @@ export default function Supply({ setPage, handleLogout }) {
 
   return (
     <div className="sales-page">
-
       <div className="sales-nav">
-
         <img
           src="/assets/reliance-logo.png"
           alt="Reliance Logo"
@@ -29,7 +26,6 @@ export default function Supply({ setPage, handleLogout }) {
         />
 
         <div className="nav-title">
-
           <p>
             Home <span>›</span> Supply Chain
           </p>
@@ -38,29 +34,19 @@ export default function Supply({ setPage, handleLogout }) {
             <span>Supply</span> Chain
           </h1>
 
-          <small>
-            Logistics, inventory & operational dashboards
-          </small>
-
+          <small>Logistics, inventory & operational dashboards</small>
         </div>
 
         <div className="sales-nav-right">
-
           <span>Welcome, Admin</span>
 
-          <button
-            className="logout-btn"
-            onClick={handleLogout}
-          >
+          <button className="logout-btn" onClick={handleLogout}>
             Logout
           </button>
-
         </div>
-
       </div>
 
       <div className="sales-tools">
-
         <input
           type="text"
           placeholder="Search Supply dashboards"
@@ -69,19 +55,13 @@ export default function Supply({ setPage, handleLogout }) {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
 
-        <button
-          className="back-btn"
-          onClick={() => setPage("home")}
-        >
+        <button className="back-btn" onClick={() => setPage("home")}>
           ← Back to Home
         </button>
-
       </div>
 
       <div className="sales-grid">
-
         <div className="sales-card hr-card">
-
           <h2>Supply Chain Dashboards</h2>
 
           <p className="category-subtitle">
@@ -89,9 +69,7 @@ export default function Supply({ setPage, handleLogout }) {
           </p>
 
           <div className="dashboard-links">
-
             {filteredDashboards.map((dash, index) => (
-
               <a
                 key={index}
                 href={dash.link}
@@ -99,35 +77,26 @@ export default function Supply({ setPage, handleLogout }) {
                 rel="noreferrer"
                 className="dashboard-link"
               >
-
-                <div>
-
+                <div className="dashboard-info">
                   <span>{dash.name}</span>
 
-                  <small>{dash.platform}</small>
-
+                  <small className="dashboard-platform">
+                    {dash.platform}
+                  </small>
                 </div>
-
               </a>
-
             ))}
-
           </div>
-
         </div>
-
       </div>
 
       {filteredDashboards.length === 0 && (
-        <p className="no-results">
-          No Supply Chain dashboards found.
-        </p>
+        <p className="no-results">No Supply Chain dashboards found.</p>
       )}
 
       <div className="footer">
         © 2026 Reliance Consumer Products Limited.
       </div>
-
     </div>
   );
 }

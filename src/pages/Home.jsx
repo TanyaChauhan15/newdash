@@ -31,7 +31,7 @@ export default function Home({ setPage }) {
       action: () => setPage("hr"),
     },
     {
-      name: "After Sales*",
+      name: "After Sales",
       subtitle: "Support & service",
       icon: "🛠",
       className: "dept-after",
@@ -41,29 +41,23 @@ export default function Home({ setPage }) {
 
   return (
     <div className="home-page">
+      <div className="home-header">
+        <div className="home-header-left"></div>
 
-      {/* TOP BAR */}
-
-      <div className="home-topbar">
-
-        <div className="home-logo-box">
+        <div className="home-header-center">
           <img
             src="/assets/reliance-logo.png"
             alt="Reliance Logo"
-            className="home-company-logo"
+            className="home-header-logo"
           />
         </div>
 
-        <div className="home-welcome">
+        <div className="home-header-right">
           Welcome, Admin
         </div>
-
       </div>
 
-      {/* MAIN HUB */}
-
       <div className="hub-container">
-
         <div className="hub-center">
           <img
             src="/assets/reliance-logo.png"
@@ -82,11 +76,8 @@ export default function Home({ setPage }) {
             }
           >
             <span className="hub-icon">{dept.icon}</span>
-
             <h3>{dept.name}</h3>
-
             <p>{dept.subtitle}</p>
-
           </button>
         ))}
 
@@ -95,7 +86,6 @@ export default function Home({ setPage }) {
         <div className="hub-line line-to-supply"></div>
         <div className="hub-line line-to-hr"></div>
         <div className="hub-line line-to-after"></div>
-
       </div>
     </div>
   );
