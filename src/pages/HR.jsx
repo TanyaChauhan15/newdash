@@ -7,27 +7,27 @@ export default function HR({ setPage, handleLogout }) {
   const dashboards = [
     {
       name: "Onboarding Report",
-      platform: "Looker Studio",
+      
       link: "https://datastudio.google.com/u/0/reporting/db97ad6a-5322-41d0-b736-237511e99235/page/p_lnuz953bnd",
     },
     {
       name: "User Details",
-      platform: "Looker Studio",
+      
       link: "https://datastudio.google.com/u/0/reporting/ffed7ece-2189-4b92-99ce-4365bf1bb86c/page/p_t93n0pxbtd",
     },
     {
       name: "User Mapping Details",
-      platform: "Looker Studio",
+      
       link: "https://datastudio.google.com/u/0/reporting/ffed7ece-2189-4b92-99ce-4365bf1bb86c/page/2sgNF",
     },
     {
       name: "CSO Login Activity",
-      platform: "Looker Studio",
+      
       link: "https://datastudio.google.com/u/0/reporting/ffed7ece-2189-4b92-99ce-4365bf1bb86c/page/p_y00reuio2d",
     },
     {
       name: "Hierarchy Mapping",
-      platform: "Looker Studio",
+      
       link: "https://datastudio.google.com/u/0/reporting/ffed7ece-2189-4b92-99ce-4365bf1bb86c/page/p_6rthaf6btd",
     },
   ];

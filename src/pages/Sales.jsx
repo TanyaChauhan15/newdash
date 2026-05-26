@@ -10,7 +10,7 @@ export default function Sales({ setPage, handleLogout }) {
       subtitle: "Daily sales reporting dashboards",
       dashboards: [
         {
-          name: "DSR Dashboard",
+          name: "DSR Overall",
           link: "https://rrainsights.ril.com/views/RCPLDSR-Dashboards-Databricks/DSR?:showAppBanner=false&:display_count=n&:showVizHome=n",
         },
         {
@@ -18,23 +18,23 @@ export default function Sales({ setPage, handleLogout }) {
           link: "https://rrainsights.ril.com/views/RCPLDSR-MobileViews-4H-Sample/LandingPage?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link",
         },
         {
-          name: "DSR Beverages",
+          name: "Beverages",
           link: "https://rrainsights.ril.com/views/DSR-Beverage/BeveragesDashboard?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link",
         },
         {
-          name: "DSR Staples",
+          name: "Staples",
           link: "https://rrainsights.ril.com/views/DSR-Staples/StaplesDashboard?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link",
         },
         {
-          name: "DSR Food & Snacks",
+          name: "Food & Snacks",
           link: "https://rrainsights.ril.com/views/FoodAndSnacks-Databricks/FoodAndSnacks?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link",
         },
         {
-          name: "DSR Lotus",
+          name: "Lotus",
           link: "https://rrainsights.ril.com/views/DSR-LotusDashboardNew/AllvendorsQuarterwise-NetTaxbaseAmt?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link",
         },
         {
-          name: "DSR Biscuits",
+          name: "Biscuits",
           link: "https://rrainsights.ril.com/views/Biscuits/Biscuits?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link",
         },
       ],
@@ -130,7 +130,7 @@ export default function Sales({ setPage, handleLogout }) {
         
         {
           name: "Distributor Churn Dashboard",
-          link: "https://adb-429867542854005.5.azuredatabricks.net/dashboardsv3/01f15443933d1dec902c3665993d03bf/published?o=429867542854005",
+          link: "https://adb-1331627216171091.11.azuredatabricks.net/login.html?o=1331627216171091&next_url=%2Fdashboardsv3%2F01f15822659919bc851faa1412bec299%2Fpublished%3FisDbOne%3Dtrue%26utm_source%3Ddatabricks-one%26o%3D1331627216171091&tuuid=3523e765-0351-4d5e-bc2f-b036d7d69fa9",
         },
       ],
     },
@@ -211,13 +211,7 @@ export default function Sales({ setPage, handleLogout }) {
                   <div className="dashboard-info">
                     <span>{dash.name}</span>
 
-                    <small className="dashboard-platform">
-                     {dash.link.includes("datastudio")
-                       ? "Looker Studio"
-                       : dash.link.includes("databricks")
-                       ? "Databricks"
-                       : "Tableau"}
-                    </small>
+                    
                   </div>
                 </a>
               ))}

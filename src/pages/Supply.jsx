@@ -7,7 +7,7 @@ export default function Supply({ setPage, handleLogout }) {
   const dashboards = [
     {
       name: "Legacy Asset Inventory Report",
-      platform: "Looker Studio",
+      
       link: "https://datastudio.google.com/reporting/b28c1167-ca3f-4685-b7b5-789a3303b55e/page/zyltF",
     },
   ];
@@ -80,9 +80,7 @@ export default function Supply({ setPage, handleLogout }) {
                 <div className="dashboard-info">
                   <span>{dash.name}</span>
 
-                  <small className="dashboard-platform">
-                    {dash.platform}
-                  </small>
+                  
                 </div>
               </a>
             ))}
