@@ -56,15 +56,15 @@ export default function Sales({ setPage, handleLogout }) {
           link: "https://datastudio.google.com/u/0/reporting/db97ad6a-5322-41d0-b736-237511e99235/page/p_ddriefq6yd",
         },
         {
-          name: "Beverages",
+          name: "Onboarding and Sec Order Report-Beverages",
           link: "https://datastudio.google.com/u/0/reporting/db97ad6a-5322-41d0-b736-237511e99235/page/p_yd3fxelh2d",
         },
         {
-          name: "Staples",
+          name: "Onboarding and Sec Order Report-Staples",
           link: "https://datastudio.google.com/u/0/reporting/db97ad6a-5322-41d0-b736-237511e99235/page/p_8pe5hix52d",
         },
         {
-          name: "HPC",
+          name: "Onboarding and Sec Order Report-HPC",
           link: "https://datastudio.google.com/u/0/reporting/db97ad6a-5322-41d0-b736-237511e99235/page/p_67ssolvs2d",
         },
         {
@@ -108,8 +108,8 @@ export default function Sales({ setPage, handleLogout }) {
       ],
     },
     {
-      title: "Commercial & Mapping",
-      subtitle: "Discounting, mapping and advanced sales reports",
+      title: "Commercial",
+      subtitle: "Discounting and Distributor Churn Dashbaord",
       dashboards: [
         {
           name: "Discount Reporting",
@@ -124,15 +124,15 @@ export default function Sales({ setPage, handleLogout }) {
           link: "https://datastudio.google.com/u/0/reporting/c8150acf-0929-4128-8340-75257a4a4ed4/page/AD0pF",
         },
         {
-          name: "Beats Dump",
+          name: "Beats",
           link: "https://datastudio.google.com/u/0/reporting/ffed7ece-2189-4b92-99ce-4365bf1bb86c/page/p_ukc0s25btd",
         },
         {
-          name: "Hierarchy Mapping Dump",
+          name: "Hierarchy Mapping ",
           link: "https://datastudio.google.com/u/0/reporting/ffed7ece-2189-4b92-99ce-4365bf1bb86c/page/p_6rthaf6btd",
         },
         {
-          name: "Churn Dashboard",
+          name: "Distributor Churn Dashboard",
           link: "https://adb-429867542854005.5.azuredatabricks.net/dashboardsv3/01f15443933d1dec902c3665993d03bf/published?o=429867542854005",
         },
       ],
